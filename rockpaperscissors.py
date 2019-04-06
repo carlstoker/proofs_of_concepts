@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from random import choice
 
-#Dict defining hands
+#Dict defining winning hands
 hands = {
     'Rock': {'Scissors': 'crushes', 'Lizard': 'crushes'},
     'Paper': {'Rock': 'covers', 'Spock': 'disproves'},
