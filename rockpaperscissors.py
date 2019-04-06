@@ -11,11 +11,10 @@ hands = {
 }
 
 #Player input for hand selection
-player = None
-while player is None:
+while True:
     player = input('{}? '.format(', '.join(hands.keys())))
-    if player not in hands.keys():
-        player = None
+    if player in hands.keys():
+        break
 
 #Pseudorandomize hand selection for CPU
 computer = choice(list(hands.keys()))
