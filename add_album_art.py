@@ -20,7 +20,6 @@ def add_art(audio_filename, cover_path):
     print('Adding cover.jpg to {}'.format(audio_path))
 
     with tempfile.TemporaryDirectory() as temp_directory:
-
         command = [
             'ffmpeg',
             '-i', audio_path,
