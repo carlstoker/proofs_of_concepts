@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description" content="Compares cellular phone provider pricing." />
+		<meta name="keywords" content="budgeting, cell phone" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		
+		<link rel="stylesheet" href="pricing.css">
+
+		<title>Phone Bill Comparison</title>
+	</head>
+	<body>
+
+		<main id="main-content" class="content">
+			<h2>Monthly Bandwidth Usage</h2>
+			<input type="range" id="data" onchange="dataUpdate(this.valueAsNumber);" oninput="dataDisplay.value = data.valueAsNumber" min=0 max=20 step=0.1 value=1.5>
+			<output id="dataDisplay">1.5</output>
+			<div id="plans" class="divTable blueTable">
+				<div class="divTableHeading">
+					<div class="divTableRow">
+						<div class="divTableHead">Wireless Plan</div>
+						<div class="divTableHead">Price</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div role="contentinfo">
+			<p>
+				© 2019. All rights reserved.
+			</p>
+		</div>
+
+		<script src="pricing.js" defer="defer"></script>
+	</body>
+</html>
