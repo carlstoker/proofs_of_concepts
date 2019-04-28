@@ -64,7 +64,7 @@ def get_metadata(filename, keys):
     return metadata
 
 
-def random_timecode(filename, min=5, max=95):
+def random_timecode(filename, timecode_min=5, timecode_max=95):
     """Extract individual frames for processing.
 
     Arguments:
@@ -74,10 +74,10 @@ def random_timecode(filename, min=5, max=95):
     """
 
     duration = get_metadata(filename, ['duration'])['duration']
-    min = int(duration * float(min) / 100)
-    max = int(duration * float(max) / 100)
+    timecode_min = int(duration * float(timecode_min) / 100)
+    timecode_max = int(duration * float(timecode_max) / 100)
 
-    return random.randrange(min, max)
+    return random.randrange(timecode_min, timecode_max)
 
 
 if __name__ == "__main__":
