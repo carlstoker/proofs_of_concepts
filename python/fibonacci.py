@@ -28,5 +28,6 @@ def main():
     formatted_sequence = ', '.join(str(i) for i in fibonacci(desired))
     print('{}.'.format(formatted_sequence))
 
+
 if __name__ == '__main__':
     main()

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+"""Rock, Paper, Scissors"""
 from random import choice
 
-#Dict defining winning hands
+# Dict defining winning hands
 hands = {
     'Rock': {'Scissors': 'crushes', 'Lizard': 'crushes'},
     'Paper': {'Rock': 'covers', 'Spock': 'disproves'},
@@ -10,16 +11,16 @@ hands = {
     'Spock': {'Scissors': 'smashes', 'Rock': 'vaporizes'}
 }
 
-#Player input for hand selection
+# Player input for hand selection
 while True:
     player = input('{}? '.format(', '.join(hands.keys())))
     if player in hands.keys():
         break
 
-#Pseudorandomize hand selection for CPU
+# Pseudorandomize hand selection for CPU
 computer = choice(list(hands.keys()))
 
-#Result calculation and output
+# Result calculation and output
 if player == computer:
     print('You tied!')
 elif computer in hands[player]:

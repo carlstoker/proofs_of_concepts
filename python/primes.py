@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-# Sieve of Eratosthenes
+"""Sieve of Eratosthenes"""
 from math import sqrt
 from sys import argv
+
 
 def prime_sieve(n):
     sieve = [True] * n
@@ -14,6 +15,7 @@ def prime_sieve(n):
             pointer += i
 
     return [i for i in range(len(sieve)) if sieve[i]]
+
 
 primes = prime_sieve(int(argv[1]))
 print('{} primes found through {}: {}'.format(len(primes), argv[1], primes))
