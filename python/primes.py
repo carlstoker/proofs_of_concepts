@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 """Sieve of Eratosthenes"""
-from math import sqrt
 from sys import argv
-
 
 def prime_sieve(n):
     sieve = [True] * n
     sieve[0:2] = [False, False]
 
-    for i in range(2, int(sqrt(n)) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         pointer = i * 2
         while pointer < n:
             sieve[pointer] = False
