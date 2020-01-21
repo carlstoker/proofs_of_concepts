@@ -4,7 +4,7 @@ from sys import argv
 
 def prime_sieve(n):
     sieve = [True] * n
-    sieve[0:2] = [False, False]
+    sieve[0:2] = [False] * 2
 
     for i in range(2, int(n ** 0.5) + 1):
         pointer = i * 2
